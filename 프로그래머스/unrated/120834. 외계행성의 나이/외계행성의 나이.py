@@ -1,3 +1,3 @@
 def solution(age):
-    alpha = 'abcdefghijklmnopqrstuvwxyz'
+    alpha = 'abcdefghij'
     return ''.join([alpha[int(a)] for a in str(age)])
