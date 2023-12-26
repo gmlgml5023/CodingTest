@@ -1,6 +1,6 @@
 def solution(my_string):
-    tmp = []
+    answer = ''
     for s in my_string:
-        if s not in tmp:
-            tmp.append(s)
-    return ''.join(tmp)
+        if s not in answer:
+            answer += s
+    return answer
