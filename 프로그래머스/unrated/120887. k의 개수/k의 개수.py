@@ -5,3 +5,7 @@ def solution(i, j, k):
             if n == str(k):
                 answer += 1
     return answer
+
+# 리스트 컴프리헨션
+def solution2(i, j, k):
+    return sum([str(i).count(str(k)) for i in range(i, j+1)])
