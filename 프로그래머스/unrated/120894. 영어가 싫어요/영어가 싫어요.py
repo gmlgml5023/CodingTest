@@ -3,3 +3,8 @@ def solution(numbers):
     for i in dict:
         numbers = numbers.replace(i, str(dict[i]))
     return int(numbers)
+
+def solution2(numbers):
+    for num, eng in enumerate(["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]):
+        numbers = numbers.replace(eng, str(num))
+    return int(numbers)
