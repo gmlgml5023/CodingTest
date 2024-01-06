@@ -1,2 +1,8 @@
 def solution(array, n):
-    return sorted(array, key=lambda x: (abs(x-n), x-n))[0]
+    array.sort()
+    tmp = []
+
+    for a in array:
+        tmp.append(abs(a-n))
+    return array[tmp.index(min(tmp))]
+    
