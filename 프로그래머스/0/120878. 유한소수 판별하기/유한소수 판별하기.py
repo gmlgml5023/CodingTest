@@ -3,7 +3,8 @@ def solution(a,b):
         if (a%i==0)&(b%i==0):
             a = a//i
             b = b//i
-    for n in [2,5]:
-        while not b % n:
-            b //= n
-    return 1 if b == 1 else 2
+        while b%2==0:
+            b //= 2
+        while b%5==0:
+            b //= 5
+    return 1 if b==1 else 2
