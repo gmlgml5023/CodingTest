@@ -11,14 +11,11 @@ def solution(polynomial):
         elif p.isdigit():
             num += int(p)
 
-    if (xs==0)&(num==0):
-        answer = 0
-    elif (xs!=0)&(num==0):
-        answer = str(xs)+'x'
-        if xs==1: answer = 'x'
+    if (xs!=0)&(num==0):
+        answer = f'{xs}x' if xs!=1 else 'x'
     elif (xs==0)&(num!=0):
         answer = str(num)
     elif (xs!=0)&(num!=0):
-        answer = str(xs)+'x + '+ str(num)
-        if xs==1: answer = 'x + '+ str(num)
+        answer = f'{xs}x + {num}' if xs!=1 else f'x + {str(num)}'
+        
     return answer
