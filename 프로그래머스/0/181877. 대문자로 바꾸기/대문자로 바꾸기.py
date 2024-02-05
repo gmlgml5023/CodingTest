@@ -1,2 +1,2 @@
-def solution(myString):
-    return myString.upper()
+def solution(mystring):
+    return mystring.upper()
