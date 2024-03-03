@@ -1,5 +1,5 @@
 ## 💻 CodingTest 
-> 개인 코딩 테스트 준비 <br/>
+> 코딩테스트 준비 <br/>
  <br/>
 
 ## 💻 Programmers
