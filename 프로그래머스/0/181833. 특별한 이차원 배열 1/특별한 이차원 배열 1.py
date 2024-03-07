@@ -7,3 +7,8 @@ def solution(n):
             else: lst2.append(0)
         lst1.append(lst2)
     return lst1
+
+def solution2(n):
+    answer = [[0]*n for i in range(n)]
+    for i in range(n): answer[i][i] = 1
+    return answer
