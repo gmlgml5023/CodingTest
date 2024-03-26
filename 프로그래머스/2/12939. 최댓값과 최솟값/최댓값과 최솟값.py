@@ -1,3 +1,3 @@
 def solution(s):
-    s = [int(n) for n in s.split()]
-    return ' '.join([str(min(s)), str(max(s))])
+    s = list(map(int, s.split()))
+    return f"{min(s)} {max(s)}"
