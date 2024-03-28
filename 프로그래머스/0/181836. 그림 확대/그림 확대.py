@@ -6,3 +6,6 @@ def solution(picture, k):
             ele += e*k
         answer.extend([ele]*k)
     return answer
+
+def solution2(picture, k):
+    return [p.replace('.', '.'*k).replace('x', 'x'*k) for p in picture for _ in range(k)]
