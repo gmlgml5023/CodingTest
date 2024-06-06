@@ -1,8 +1,8 @@
-N, M = map(int, input().split())
+import sys
+N, M = map(int, sys.stdin.readline().split())
 arr = list(range(1,N+1))
 for _ in range(M):
-    i, j = map(int, input().split())
-    arr[i-1:j] = reversed(arr[i-1:j])
+    i, j = map(int, sys.stdin.readline().split())
+    arr[i-1:j] = arr[i-1:j][::-1]
 
-for a in arr:
-    print(a, end=' ')
+print(*arr)
