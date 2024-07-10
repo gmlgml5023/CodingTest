@@ -1,0 +1,1 @@
+print(*[ord(a)-64 for a in input()])
