@@ -1,12 +1,13 @@
+triangle = [[1] * line for line in range(1, 11)]
+
+for i in range(2, 10):
+    for j in range(i - 1):
+        triangle[i][j + 1] = triangle[i - 1][j] + triangle[i - 1][j + 1]
+
 T = int(input())
 for tc in range(1, T+1):
     N = int(input())
-    triangle = [[1]*line for line in range(1, N+1)]
-    
-    for j in range(2, N):
-        for k in range(j-1):
-            triangle[j][k+1] = triangle[j-1][k] + triangle[j-1][k+1]
-
     print(f'#{tc}')
-    for t in triangle:
+    result = triangle[:N]
+    for t in result:
         print(*t)
