@@ -1,32 +1,19 @@
-'''
-7
-A B C D E F G
-4
-JACK QUEEN KING ACE
-5
-ALAKIR ALEXSTRASZA DR-BOOM LORD-JARAXXUS AVIANA
-'''
-
 T = int(input())
 for tc in range(1, T+1):
     N = int(input())
-    arr = input().split()
-
-    if N % 2 == 0:
-        begin = arr[:N // 2]
-        end = arr[N // 2:]
-
-        lst = []
-        for i in range(N // 2):
-            lst.append(begin[i])
-            lst.append(end[i])
-    else:
-        begin = arr[:N//2]
-        end = arr[N//2+1:]
-
-        lst = []
-        for i in range(N // 2):
-            lst.append(begin[i])
-            lst.append(end[i])
-        lst = lst + [arr[N//2]]
-    print(f'#{tc}', *lst)
+    card = input().split()
+    answer = [0] * N
+    
+    d = (N+1)//2  
+    i1, i2, i3 = 0, d, 0
+    
+    while i3 < N:
+        if i1 < d:
+            answer[i3] = card[i1]
+            i1 += 1
+            i3 += 1
+        if i2 < N:
+            answer[i3] = card[i2]
+            i2 += 1
+            i3 += 1
+    print(f'#{tc}', *answer)
