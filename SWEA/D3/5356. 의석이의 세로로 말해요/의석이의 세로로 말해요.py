@@ -6,8 +6,6 @@ for tc in range(1, T+1):
     result = ''
     for i in range(max_len):
         for j in range(5):
-            if len(sentence[j]) < max_len and i >= len(sentence[j]):
-                pass
-            else:
+            if len(sentence[j]) > i:
                 result += sentence[j][i]
     print(f'#{tc} {result}')
