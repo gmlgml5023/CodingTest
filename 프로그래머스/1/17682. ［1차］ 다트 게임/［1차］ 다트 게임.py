@@ -1,22 +1,19 @@
 def solution(dartResult):
-    N = len(dartResult)
     square = {'S': 1, 'D': 2, 'T': 3}
     score = []
     tmp = ''
-    for i in range(N):
-        if dartResult[i].isdigit():
-            tmp += dartResult[i]
-        elif dartResult[i].isalpha():
-            score.append(int(tmp) ** square[dartResult[i]])
+    for i, dart in enumerate(dartResult):
+        if dart.isdigit():
+            tmp += dart
+        elif dart.isalpha():
+            score.append(int(tmp) ** square[dart])
             tmp = ''
-        elif dartResult[i] == '*':
+        elif dart == '*':
             if len(score) == 1:
                 score[-1] = score[-1] * 2
             elif len(score) >= 2:
-                score[-2] = score[-2] * 2
-                score[-1] = score[-1] * 2
-        elif dartResult[i] == '#':
+                score[-2:] = [s*2 for s in score[-2:]]
+        elif dart == '#':
             if score:
                 score[-1] = -score[-1]
-
     return sum(score)
