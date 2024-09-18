@@ -1,5 +1,5 @@
 # dfs 함수
-def dfs(start_node, adjL):   # start_node : 탐색을 시작할 노드, adjL : 인접리스트
+def dfs(start_node):         # start_node : 탐색을 시작할 노드
     stack = [start_node]     # 스택에 처음 시작 노드 push
     visited = [0] * 100      # 방문 여부 기록할 리스트
     visited[start_node] = 1  # 시작 노드를 방문 처리
@@ -28,8 +28,10 @@ for _ in range(1, 11):
         start, end = arr[2*i], arr[2*i+1]
         adjL[start].append(end)
 
+    visited = [0] * 100
+
     # DFS 호출 및 결과 저장
-    result = dfs(0, adjL)
+    result = dfs(0)
 
     # 결과 출력
     print(f'#{tc} {result}')
